@@ -4,8 +4,8 @@ package main
 import (
 	"fmt"
 
+	"github.com/appleseedexm/go-spotify/spotify"
 	simplejson "github.com/bitly/go-simplejson"
-	"github.com/rapito/go-spotify/spotify"
 	"github.com/spf13/viper"
 )
 

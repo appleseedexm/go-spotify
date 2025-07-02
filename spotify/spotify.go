@@ -31,7 +31,8 @@ const (
 // Creates a New Spotify API object with the
 // clientID and clientSecret
 // Usage:
-// 	spotify.New("XXX","YYY")
+//
+//	spotify.New("XXX","YYY")
 func New(clientID, clientSecret string) Spotify {
 
 	return initialize(clientID, clientSecret)
@@ -91,7 +92,8 @@ func (spotify *Spotify) Authorize() (bool, []error) {
 // args: Arguments to be used based on format
 //
 // Usage:
-// 	spotify.Get("albums/%s",nil,0sNOF9WDwhWunNAHPD3Baj)
+//
+//	spotify.Get("albums/%s",nil,0sNOF9WDwhWunNAHPD3Baj)
 func (spotify *Spotify) Get(format string, data map[string]interface{}, args ...interface{}) ([]byte, []error) {
 	return spotify.Request("GET", format, data, args...)
 }
@@ -109,7 +111,8 @@ func (spotify *Spotify) Get(format string, data map[string]interface{}, args ...
 // args: Arguments to be used based on format
 //
 // Usage:
-// 	spotify.Post("users/%s/playlists",map[string]interface{},"wizzler")
+//
+//	spotify.Post("users/%s/playlists",map[string]interface{},"wizzler")
 func (spotify *Spotify) Post(format string, data map[string]interface{}, args ...interface{}) ([]byte, []error) {
 	return spotify.Request("POST", format, data, args...)
 }
@@ -127,7 +130,8 @@ func (spotify *Spotify) Post(format string, data map[string]interface{}, args ..
 // args: Arguments to be used based on format
 //
 // Usage:
-// 	spotify.Put("me/tracks?ids=%s",nil,"4iV5W9uYEdYUVa79Axb7Rh")
+//
+//	spotify.Put("me/tracks?ids=%s",nil,"4iV5W9uYEdYUVa79Axb7Rh")
 func (spotify *Spotify) Put(format string, data map[string]interface{}, args ...interface{}) ([]byte, []error) {
 	return spotify.Request("PUT", format, data, args...)
 }
@@ -143,7 +147,8 @@ func (spotify *Spotify) Put(format string, data map[string]interface{}, args ...
 // args: Arguments to be used based on format
 //
 // Usage:
-// 	spotify.Delete("me/tracks?ids=%s","4iV5W9uYEdYUVa79Axb7Rh")
+//
+//	spotify.Delete("me/tracks?ids=%s","4iV5W9uYEdYUVa79Axb7Rh")
 func (spotify *Spotify) Delete(format string, args ...interface{}) ([]byte, []error) {
 	return spotify.Request("DELETE", format, nil, args...)
 }
@@ -160,7 +165,8 @@ func (spotify *Spotify) Delete(format string, args ...interface{}) ([]byte, []er
 // args: Arguments to be used based on format
 //
 // Usage:
-// 	spotify.request("GET","albums/%s",nil,"0sNOF9WDwhWunNAHPD3Baj")
+//
+//	spotify.request("GET","albums/%s",nil,"0sNOF9WDwhWunNAHPD3Baj")
 func (spotify *Spotify) Request(method, format string, data map[string]interface{}, args ...interface{}) ([]byte, []error) {
 
 	// create endpoint based on passed format
